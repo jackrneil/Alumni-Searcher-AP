@@ -3,7 +3,7 @@ services:
     name: alumni-searcher-api
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn app.main:app --host 0.0.0.0 --port 10000
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
     envVars:
       - key: RAPID_KEY
         value: 291bb8783bmsha25eed8621bfae3p1f61ddjsn5d3883db32e9
