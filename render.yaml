@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: alumni-searcher-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: RAPID_KEY
+        value: 291bb8783bmsha25eed8621bfae3p1f61ddjsn5d3883db32e9
+      - key: RAPID_HOST
+        value: fresh-linkedin-profile-data.p.rapidapi.com
+      - key: ALLOWED_ORIGIN
+        value: https://assignment-3-18741.bubbleapps.io 
